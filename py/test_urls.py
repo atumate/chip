@@ -10,8 +10,8 @@ import requests
 import re 
 from pprint import pprint
 
-TIME_OUT_CONNECTION = 1
-TIME_OUT_READ = 2
+TIME_OUT_CONNECTION = 2
+TIME_OUT_READ = 3
 
 
 def test_url(targetURL):
@@ -58,6 +58,16 @@ def write_csv(fname,text_list):
     return 'ok'
 
 
-csv_list_ready=read_txt('ip.txt')
-write_csv('results.csv',csv_list_ready)
 
+
+def main():
+    print('test_url.py start!')
+    print('TIME_OUT_CONNECTION:'+ str(TIME_OUT_CONNECTION) +'s')
+    print('TIME_OUT_READ:'+ str(TIME_OUT_READ) +'s' + '\n')
+    csv_list_ready=read_txt('ip.txt')
+    write_csv('results.csv',csv_list_ready)
+
+
+
+if __name__ == "__main__":
+    main()
