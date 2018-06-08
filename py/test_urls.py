@@ -64,7 +64,7 @@ def main():
     print('test_url.py start!')
     print('TIME_OUT_CONNECTION:'+ str(TIME_OUT_CONNECTION) +'s')
     print('TIME_OUT_READ:'+ str(TIME_OUT_READ) +'s' + '\n')
-    csv_list_ready=read_txt('ip.txt')
+    csv_list_ready=read_txt('urls.txt')
     write_csv('results.csv',csv_list_ready)
 
 
